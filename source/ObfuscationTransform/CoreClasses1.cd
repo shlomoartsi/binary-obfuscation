@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="ObfuscationTransform.Core.ICode">
+    <Position X="4.5" Y="0.5" Width="2" />
+    <AssociationLine Name="CodeInMemoryLayout" Type="ObfuscationTransform.Core.ICodeInMemoryLayout" FixedToPoint="true">
+      <Path>
+        <Point X="5.417" Y="1.368" />
+        <Point X="5.417" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\ICode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CodeInMemoryLayout" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Functions" />
+      <Property Name="AssemblyInstructions" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Core.IAssemblyInstructionForTransformation">
+    <Position X="8.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAgABAAAAAAgAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Core\IAssemblyInstructionForTransformation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SharpDisasm.IInstruction">
+    <Position X="11.75" Y="0.5" Width="1.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ObfuscationTransform.Core.IFunction">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAQAAAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\IFunction.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="BasicBlocks" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Core.IBasicBlock">
+    <Position X="8.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAEAAAAAAIAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Core\IBasicBlock.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Core.ICodeInMemoryLayout">
+    <Position X="3.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAIBAAAAAAAAAwAQAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\ICodeInMemoryLayout.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RelocationDirectoryInfo" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Core.IRelocationDirectoryInfo">
+    <Position X="3.75" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAABAAAgAAAAAAAAAAAAAACAAAAAAAQAA=</HashCode>
+      <FileName>Core\IRelocationDirectoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

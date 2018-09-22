@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ObfuscationTransform.Transformation.TransformationBase">
+    <Position X="5.25" Y="1.75" Width="3.5" />
+    <Members>
+      <Field Name="m_addressesInInstructionMap" Hidden="true" />
+      <Field Name="m_addressToInstructionMap" Hidden="true" />
+    </Members>
+    <AssociationLine Name="m_instructionWithAddressOperandDecider" Type="ObfuscationTransform.Core.IInstructionWithAddressOperandDecider" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="2.125" />
+        <Point X="3.156" Y="2.125" />
+        <Point X="3.156" Y="1.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="m_instructionWithAddressOperandTransform" Type="ObfuscationTransform.Transformation.IInstructionWithAddressOperandTransform" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.562" Y="4.392" />
+        <Point X="5.562" Y="5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.085" Y="0.21" Height="0.182" Width="2.885" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="m_statistics" Type="ObfuscationTransform.Core.IStatistics" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.5" Y="1.75" />
+        <Point X="8.5" Y="1.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAABAABgIAAAAAAQAIAAoAAgAAAAAQAEyAAA=</HashCode>
+      <FileName>Transformation\TransformationBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_codeInMemoryLayoutFactory" />
+      <Field Name="m_codeTransform" />
+      <Field Name="m_instructionWithAddressOperandDecider" />
+      <Field Name="m_instructionWithAddressOperandTransform" />
+      <Field Name="m_relocationDirectoryFromNewCode" />
+      <Field Name="m_statistics" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ObfuscationTransform.Transformation.Junk.TransformationAddingJunkBytes">
+    <Position X="1.75" Y="7.75" Width="2.5" />
+    <InheritanceLine Type="ObfuscationTransform.Transformation.TransformationBase" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="4.392" />
+        <Point X="7" Y="7.383" />
+        <Point X="4.25" Y="7.383" />
+        <Point X="4.25" Y="7.75" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="m_disassemblerFactory" Type="ObfuscationTransform.Core.Factory.IDisassemblerFactory">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.189" Y="0.143" Height="0.182" Width="1.638" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEAAACAQAAAAAAAAACAAAEAAgAAA=</HashCode>
+      <FileName>Transformation\Junk\TransformationAddingJunkBytes.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_disassemblerFactory" />
+      <Field Name="m_junkBytesProvider" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ObfuscationTransform.Transformation.TransformationAddingUnconditionalJump">
+    <Position X="6.25" Y="8" Width="3" />
+    <InheritanceLine Type="ObfuscationTransform.Transformation.TransformationBase" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="4.392" />
+        <Point X="7" Y="7.383" />
+        <Point X="9.188" Y="7.383" />
+        <Point X="9.188" Y="8" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Transformation\TransformationAddingUnconditionalJump.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_codeParser" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ObfuscationTransform.Parser.ICodeParser" Collapsed="true">
+    <Position X="5.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parser\ICodeParser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Core.Factory.IDisassemblerFactory" Collapsed="true">
+    <Position X="0.5" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Factory\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.Junk.IJunkBytesProvider">
+    <Position X="3.25" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation\Junk\IJunkBytesProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Core.Factory.ICodeInMemoryLayoutFactory">
+    <Position X="0.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Factory\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.ICodeTransform">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation\ICodeTransform.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Core.IInstructionWithAddressOperandDecider" Collapsed="true">
+    <Position X="0.5" Y="1" Width="3" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQACCAAAAAAAEAAAAQAAAAAEQAAAAAAAAAIAA=</HashCode>
+      <FileName>Core\IInstructionWithAddressOperandDecider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.IInstructionWithAddressOperandTransform">
+    <Position X="2.25" Y="5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAAAAUAAAAAAAAAAAABBAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Transformation\IInstructionWithAddressOperandTransform.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.IRelocationDirectoryFromNewCode" Collapsed="true">
+    <Position X="4.5" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation\IRelocationDirectoryFromNewCode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Core.IStatistics" Collapsed="true">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAADEAAAQAAAACAAAAAQAAAAAAAAYEAAFAAAAAAAA=</HashCode>
+      <FileName>Core\IStatistics.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

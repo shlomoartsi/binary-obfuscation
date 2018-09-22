@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="ObfuscationTransform.Transformation.ICodeTransform">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation\ICodeTransform.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.IInstructionWithAddressOperandTransform">
+    <Position X="0.5" Y="3.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAAAAUAAAAAAAAAAAABBAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Transformation\IInstructionWithAddressOperandTransform.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.IPeTransform">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation\IPeTransform.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.IRelocationDirectoryFromNewCode">
+    <Position X="0.5" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation\IRelocationDirectoryFromNewCode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.ITransformationAddingUnconditionalJump" Collapsed="true">
+    <Position X="4.25" Y="3.5" Width="3" />
+    <InheritanceLine Type="ObfuscationTransform.Transformation.ITransformation" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="3.103" />
+        <Point X="7.75" Y="3.875" />
+        <Point X="7.25" Y="3.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation\ITransformationAddingUnconditionalJump.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.Junk.ITransformationAddingJunkBytes" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="2.5" />
+    <InheritanceLine Type="ObfuscationTransform.Transformation.ITransformation" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="2" />
+        <Point X="7.75" Y="0.812" />
+        <Point X="6.75" Y="0.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation\Junk\ITransformationAddingJunkBytes.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.ITransformationExecuter" Collapsed="true">
+    <Position X="4.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation\ITransformationExecuter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObfuscationTransform.Transformation.ITransformation">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation\ITransformation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

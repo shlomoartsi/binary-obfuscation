@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5BA3F5E-FE65-454A-9160-5CDEFBE2ECFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObfuscationTransform</RootNamespace>
+    <AssemblyName>ObfuscationTransform</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Container\Container.cs" />
+    <Compile Include="Container\IParameter.cs" />
+    <Compile Include="Container\Parameter.cs" />
+    <Compile Include="Core\AddressesRange.cs" />
+    <Compile Include="Core\AssemblyInstructionForTransformation.cs" />
+    <Compile Include="Core\BasicBlock.cs" />
+    <Compile Include="Core\Code.cs" />
+    <Compile Include="Core\CodeInMemoryLayout.cs" />
+    <Compile Include="Core\CodeObfuscator.cs" />
+    <Compile Include="Core\Disassembler.cs" />
+    <Compile Include="Core\Factory\Factory.cs" />
+    <Compile Include="Core\Factory\IFactory.cs" />
+    <Compile Include="Core\Function.cs" />
+    <Compile Include="Core\IAssemblyInstructionForTransformation.cs" />
+    <Compile Include="Core\IBasicBlock.cs" />
+    <Compile Include="Core\ICode.cs" />
+    <Compile Include="Core\ICodeInMemoryLayout.cs" />
+    <Compile Include="Core\ICodeObfuscator.cs" />
+    <Compile Include="Core\IDisassembler.cs" />
+    <Compile Include="Core\IStatistics.cs" />
+    <Compile Include="Core\IFunction.cs" />
+    <Compile Include="Core\IInstructionWithAddressOperandDecider.cs" />
+    <Compile Include="Core\IRelocationDirectoryInfo.cs" />
+    <Compile Include="Core\InstructionWithAddressOperandDecider.cs" />
+    <Compile Include="Core\RelocationDirectoryInfo.cs" />
+    <Compile Include="Core\RelocationTypeOffsetItem.cs" />
+    <Compile Include="Core\StatisiticsEventArgs.cs" />
+    <Compile Include="Core\Statistics.cs" />
+    <Compile Include="Extensions\InstructionExtensions.cs" />
+    <Compile Include="Extensions\PeFileExtensions.cs" />
+    <Compile Include="Parser\BasicBlockEpilogParser.cs" />
+    <Compile Include="Parser\BasicBlockParser.cs" />
+    <Compile Include="Parser\CodeParser.cs" />
+    <Compile Include="Parser\Factory\Factory.cs" />
+    <Compile Include="Parser\FunctionEpilogParser.cs" />
+    <Compile Include="Parser\FunctionParser.cs" />
+    <Compile Include="Parser\FunctionPrologParser.cs" />
+    <Compile Include="Parser\IBasicBlockEpilogParser.cs" />
+    <Compile Include="Parser\IBasicBlockParser.cs" />
+    <Compile Include="Parser\ICodeParser.cs" />
+    <Compile Include="Parser\IFunctionEpilogParser.cs" />
+    <Compile Include="Parser\IFunctionParser.cs" />
+    <Compile Include="Parser\IFunctionPrologParser.cs" />
+    <Compile Include="PeExtensions\IImageBaseRelocationSerializer.cs" />
+    <Compile Include="PeExtensions\ImageBaseRelocationSerialiazer.cs" />
+    <Compile Include="PeExtensions\ITypeOffsetSerializer.cs" />
+    <Compile Include="PeExtensions\TypeOffsetSerializer.cs" />
+    <Compile Include="Transformation\CodeTransform.cs" />
+    <Compile Include="Transformation\Factory\Factory.cs" />
+    <Compile Include="Transformation\ICodeTransform.cs" />
+    <Compile Include="Transformation\IInstructionWithAddressOperandTransform.cs" />
+    <Compile Include="Transformation\IPeTransform.cs" />
+    <Compile Include="Transformation\IRelocationDirectoryFromNewCode.cs" />
+    <Compile Include="Transformation\ITransformation.cs" />
+    <Compile Include="Transformation\Junk\ITransformationAddingJunkBytes.cs" />
+    <Compile Include="Transformation\ITransformationExecuter.cs" />
+    <Compile Include="Transformation\ITransformationAddingUnconditionalJump.cs" />
+    <Compile Include="Transformation\InstructionWithAddressOperandTransform.cs" />
+    <Compile Include="Transformation\Junk\IJunkBytesProvider.cs" />
+    <Compile Include="Transformation\Junk\JunkBytesProvider.cs" />
+    <Compile Include="Transformation\PeTransform.cs" />
+    <Compile Include="Transformation\Junk\TransformationAddingJunkBytes.cs" />
+    <Compile Include="Transformation\RelocationDirectoryFromNewCode.cs" />
+    <Compile Include="Transformation\TransformationBase.cs" />
+    <Compile Include="Transformation\TransformationExecuter.cs" />
+    <Compile Include="Transformation\TransformationAddingUnconditionalJump.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RelocationDiagrams.cd" />
+    <None Include="CoreClasses1.cd" />
+    <None Include="CoreClasses3.cd" />
+    <None Include="CoreFactories.cd" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TransformationDiagrams.cd" />
+    <None Include="TransformationsImpleDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PeNet-devel\PeNet2\PeNet.csproj">
+      <Project>{fe67c8a3-b4b2-4429-a5ba-379580eee90c}</Project>
+      <Name>PeNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SharpDisasm1.1.5\SharpDisasm\SharpDisasm.csproj">
+      <Project>{d828384e-0251-44c4-8bf2-3608fd3dd2cd}</Project>
+      <Name>SharpDisasm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
